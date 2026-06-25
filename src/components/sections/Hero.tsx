@@ -6,7 +6,7 @@ import { instagramUrl, tiktokUrl } from '@/lib/whatsapp';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { ButtonLink } from '@/components/ui/Button';
 import { PhotoFrame } from '@/components/ui/PhotoFrame';
-import { ArrowRight, Instagram, TikTok, Star } from '@/components/ui/icons';
+import { ArrowRight, Instagram, TikTok } from '@/components/ui/icons';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -83,15 +83,17 @@ export function Hero() {
             >
               <Instagram className="h-5 w-5" />
             </a>
-            <a
-              href={tiktokUrl(general.tiktok)}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="TikTok"
-              className="text-ink/60 transition-colors hover:text-ink"
-            >
-              <TikTok className="h-5 w-5" />
-            </a>
+            {general.tiktok ? (
+              <a
+                href={tiktokUrl(general.tiktok)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="text-ink/60 transition-colors hover:text-ink"
+              >
+                <TikTok className="h-5 w-5" />
+              </a>
+            ) : null}
             <span className="h-4 w-px bg-ink/15" />
             <span className="text-[11px] uppercase tracking-wide2 text-stone">@{general.instagram}</span>
           </motion.div>
@@ -106,42 +108,14 @@ export function Hero() {
         >
           <PhotoFrame
             src={hero.image}
-            alt="Novia con maquillaje natural y luminoso realizado por Jennifer Makeup Artist en CABA"
+            alt="Look de maquillaje dewy con glow real, por Jenny Rojas en Las Cañitas, CABA"
             className="h-full w-full"
+            imgClassName="object-[50%_22%]"
             sizes="(max-width: 1024px) 100vw, 50vw"
             priority
             overlay="soft"
           />
-
-          {/* Reseña flotante */}
-          <motion.figure
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7, ease }}
-            className="absolute bottom-5 left-5 max-w-[16rem] rounded-tl-xl rounded-br-xl bg-cream/95 p-4 shadow-[0_18px_50px_-30px_rgba(22,18,14,0.6)] backdrop-blur sm:bottom-7 sm:left-7"
-          >
-            <div className="flex gap-0.5 text-mauve">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-3.5 w-3.5" fill="currentColor" stroke="none" />
-              ))}
-            </div>
-            <blockquote className="mt-2 font-display text-[15px] leading-snug text-ink">“{hero.reviewQuote}”</blockquote>
-            <figcaption className="mt-1.5 text-[10px] uppercase tracking-wide2 text-stone">{hero.reviewAuthor}</figcaption>
-          </motion.figure>
         </motion.div>
-      </div>
-
-      {/* Indicador de scroll */}
-      <div className="pointer-events-none hidden justify-center pb-6 lg:flex">
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="flex flex-col items-center gap-2 text-[10px] uppercase tracking-label text-stone"
-        >
-          Descubrí más
-          <motion.span animate={reduce ? {} : { y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }} className="block h-8 w-px bg-ink/30" />
-        </motion.span>
       </div>
     </section>
   );

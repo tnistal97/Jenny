@@ -6,11 +6,11 @@ import { Instagram, TikTok, Whatsapp, Mail } from '@/components/ui/icons';
 
 const NAV = [
   { label: 'Inicio', href: '/' },
+  { label: 'Trabajos', href: '/#portfolio' },
   { label: 'Sobre mí', href: '/#sobre-mi' },
   { label: 'Servicios', href: '/#servicios' },
   { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Especial novias', href: '/#novias' },
-  { label: 'Testimonios', href: '/#testimonios' },
+  { label: 'Instagram', href: '/#instagram' },
 ];
 
 export function Footer() {
@@ -20,7 +20,7 @@ export function Footer() {
   const socials = [
     { icon: Whatsapp, href: buildWhatsAppUrl(general.whatsapp, general.whatsappMessage), label: 'WhatsApp' },
     { icon: Instagram, href: instagramUrl(general.instagram), label: 'Instagram' },
-    { icon: TikTok, href: tiktokUrl(general.tiktok), label: 'TikTok' },
+    ...(general.tiktok ? [{ icon: TikTok, href: tiktokUrl(general.tiktok), label: 'TikTok' }] : []),
     { icon: Mail, href: mailtoUrl(general.email), label: 'Email' },
   ];
 

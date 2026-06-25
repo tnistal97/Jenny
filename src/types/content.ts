@@ -68,14 +68,18 @@ export interface ProjectImage {
 
 export interface PortfolioProject {
   id: string;
-  title: string; // "Sofía — Boda en Recoleta"
+  title: string;
   categoryId: string; // referencia a PortfolioCategory.id
   description: string;
-  location: string; // "Recoleta, CABA"
-  date: string; // "2025"
-  eventType: string; // "Casamiento"
+  location: string;
+  date: string;
+  eventType: string;
   featured: boolean; // aparece en Home
   images: ProjectImage[];
+  /** Créditos editoriales del caption, ej: "Hair · @mauromaxdebrito". */
+  credits?: string[];
+  /** Permalink del post de Instagram (referencia). */
+  permalink?: string;
 }
 
 export interface PortfolioContent {

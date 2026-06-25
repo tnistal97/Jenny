@@ -122,6 +122,20 @@ export function PortfolioExperience() {
                 <span><span className="text-ink">Fecha:</span> {project.date}</span>
               </div>
 
+              {project.credits?.length ? (
+                <div className="mt-6 flex flex-wrap gap-x-10 gap-y-1.5">
+                  {project.credits.map((c) => (
+                    <span key={c} className="text-[11px] uppercase tracking-wide2 text-stone">{c}</span>
+                  ))}
+                </div>
+              ) : null}
+
+              {project.permalink ? (
+                <a href={project.permalink} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-[11px] uppercase tracking-wide2 text-ink underline-offset-4 hover:underline">
+                  Ver en Instagram ↗
+                </a>
+              ) : null}
+
               <div className="mt-8 columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]">
                 {project.images.map((im, i) => (
                   <button key={im.id} onClick={() => setLightbox(i)} className="group mb-5 block w-full break-inside-avoid text-left" aria-label={`Ampliar ${im.caption}`}>

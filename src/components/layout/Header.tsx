@@ -3,20 +3,24 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Logo } from './Logo';
-import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { useContent } from '@/lib/content-context';
+import { buildWhatsAppUrl } from '@/lib/whatsapp';
+import { trackWhatsApp } from '@/lib/analytics';
 import { Close } from '@/components/ui/icons';
 
 const NAV = [
   { label: 'Inicio', href: '/' },
+  { label: 'Trabajos', href: '/#portfolio' },
   { label: 'Sobre mí', href: '/#sobre-mi' },
   { label: 'Servicios', href: '/#servicios' },
   { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Novias', href: '/#novias' },
-  { label: 'Testimonios', href: '/#testimonios' },
-  { label: 'Contacto', href: '/#contacto' },
+  { label: 'Instagram', href: '/#instagram' },
+  { label: 'Contacto', href: '/#footer' },
 ];
 
 export function Header() {
+  const { general } = useContent();
+  const waHref = buildWhatsAppUrl(general.whatsapp, general.whatsappMessage);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -59,11 +63,15 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden sm:block">
-            <WhatsAppButton size="md" withIcon={false}>
-              Reservar cita
-            </WhatsAppButton>
-          </div>
+          <a
+            href={waHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsApp('header')}
+            className="hidden text-[12px] uppercase tracking-wide2 text-ink transition-opacity hover:opacity-60 sm:block"
+          >
+            Escribime
+          </a>
 
           <button
             type="button"
@@ -113,11 +121,15 @@ export function Header() {
                   {item.label}
                 </motion.a>
               ))}
-              <div className="mt-10">
-                <WhatsAppButton size="lg" className="w-full">
-                  Reservar cita
-                </WhatsAppButton>
-              </div>
+              <a
+                href={waHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => { trackWhatsApp('menu'); setOpen(false); }}
+                className="mt-8 inline-block font-display text-3xl italic text-stone"
+              >
+                Escribime
+              </a>
             </nav>
           </motion.div>
         )}

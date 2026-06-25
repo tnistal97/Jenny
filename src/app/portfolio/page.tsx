@@ -2,13 +2,11 @@ import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { PortfolioExperience } from '@/components/portfolio/PortfolioExperience';
-import { FloatingWhatsApp } from '@/components/ui/FloatingWhatsApp';
-import { MobileCtaBar } from '@/components/ui/MobileCtaBar';
 
 export const metadata: Metadata = {
-  title: 'Portfolio — Novias, social, editorial y clases',
+  title: 'Portfolio — Beauty, editorial, hair & brows',
   description:
-    'Portfolio de Jennifer Makeup Artist: casamientos y novias, maquillaje social, producciones editoriales, clases de automaquillaje y antes/después. Trabajos reales en CABA.',
+    'Portfolio de Jenny Rojas: looks dewy con glow real para beauty, editorial, eventos y producciones. Makeup, hair & brows en Las Cañitas, CABA.',
   alternates: { canonical: '/portfolio' },
 };
 
@@ -20,8 +18,6 @@ export default function PortfolioPage() {
         <PortfolioExperience />
       </main>
       <Footer />
-      <FloatingWhatsApp />
-      <MobileCtaBar />
     </>
   );
 }
