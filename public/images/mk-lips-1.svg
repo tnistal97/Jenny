@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1180" viewBox="0 0 900 1180" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Labios">
+  <defs>
+    <linearGradient id="bgg7" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#f7e8e3"/><stop offset="0.55" stop-color="#eccabf"/><stop offset="1" stop-color="#d8a89d"/>
+    </linearGradient>
+    <radialGradient id="lightg7" cx="0.32" cy="0.26" r="0.75">
+      <stop offset="0" stop-color="#fdefe9" stop-opacity="0.95"/><stop offset="0.45" stop-color="#fdefe9" stop-opacity="0.22"/><stop offset="1" stop-color="#fdefe9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shadowg7" cx="0.78" cy="0.84" r="0.7">
+      <stop offset="0" stop-color="#c08a7f" stop-opacity="0.5"/><stop offset="1" stop-color="#c08a7f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vigg7" cx="0.5" cy="0.42" r="0.85">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.18"/>
+    </radialGradient>
+    <filter id="graing7"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" seed="7"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer></filter>
+    <filter id="softg7" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="45"/></filter>
+  </defs>
+  <rect width="900" height="1180" fill="url(#bgg7)"/>
+  <ellipse cx="270" cy="283.2" rx="360" ry="377.6" fill="#fdefe9" opacity="0.5" filter="url(#softg7)"/>
+  <ellipse cx="738" cy="1014.8" rx="360" ry="354" fill="#c08a7f" opacity="0.38" filter="url(#softg7)"/>
+  <rect width="900" height="1180" fill="url(#lightg7)"/>
+  <rect width="900" height="1180" fill="url(#shadowg7)"/>
+  <g transform="translate(0 50) scale(1 1)">
+    <g stroke="#a86b60" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"  opacity="0.36">
+      <path d="M300 540 Q380 492 450 522 Q520 492 600 540 Q520 612 450 600 Q380 612 300 540 Z" fill="#a86b60" fill-opacity="0.12"/>
+      <path d="M300 540 Q450 560 600 540"/>
+    </g></g>
+  <rect width="900" height="1180" fill="url(#vigg7)"/>
+  <rect width="900" height="1180" filter="url(#graing7)" opacity="0.5"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle"><text x="450" y="1097.4" font-size="28" letter-spacing="5" fill="#a86b60" opacity="0.7">LABIOS</text></g>
+  
+</svg>

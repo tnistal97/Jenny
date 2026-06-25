@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1180" viewBox="0 0 900 1180" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Antes y después">
+  <defs>
+    <linearGradient id="bgg33" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#f9f5f0"/><stop offset="0.55" stop-color="#efe6db"/><stop offset="1" stop-color="#e0d3c2"/>
+    </linearGradient>
+    <radialGradient id="lightg33" cx="0.32" cy="0.26" r="0.75">
+      <stop offset="0" stop-color="#fffaf3" stop-opacity="0.95"/><stop offset="0.45" stop-color="#fffaf3" stop-opacity="0.22"/><stop offset="1" stop-color="#fffaf3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shadowg33" cx="0.78" cy="0.84" r="0.7">
+      <stop offset="0" stop-color="#bdac96" stop-opacity="0.5"/><stop offset="1" stop-color="#bdac96" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vigg33" cx="0.5" cy="0.42" r="0.85">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.18"/>
+    </radialGradient>
+    <filter id="graing33"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" seed="33"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer></filter>
+    <filter id="softg33" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="45"/></filter>
+  </defs>
+  <rect width="900" height="1180" fill="url(#bgg33)"/>
+  <ellipse cx="270" cy="283.2" rx="360" ry="377.6" fill="#fffaf3" opacity="0.5" filter="url(#softg33)"/>
+  <ellipse cx="738" cy="1014.8" rx="360" ry="354" fill="#bdac96" opacity="0.38" filter="url(#softg33)"/>
+  <rect width="900" height="1180" fill="url(#lightg33)"/>
+  <rect width="900" height="1180" fill="url(#shadowg33)"/>
+  <g transform="translate(0 50) scale(1 1)">
+    <g opacity="0.34">
+      <circle cx="450" cy="540" r="210" stroke="#8d7a62" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+      <line x1="450" y1="330" x2="450" y2="750" stroke="#8d7a62" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 16"/>
+      <path d="M360 470 q30 70 0 140" stroke="#8d7a62" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5"/>
+      <path d="M540 450 C 590 510, 590 570, 540 630" stroke="#8d7a62" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+      <g transform="translate(560 430)"><path d="M0 -22 C3 -7 7 -3 22 0 C7 3 3 7 0 22 C-3 7 -7 3 -22 0 C-7 -3 -3 -7 0 -22 Z" fill="#8d7a62" fill-opacity="0.5" stroke="none"/></g>
+    </g></g>
+  <rect width="900" height="1180" fill="url(#vigg33)"/>
+  <rect width="900" height="1180" filter="url(#graing33)" opacity="0.5"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle"><text x="450" y="1097.4" font-size="28" letter-spacing="5" fill="#8d7a62" opacity="0.7">ANTES Y DESPUÉS</text></g>
+  
+</svg>

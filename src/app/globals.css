@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: theme('colors.rose');
+    color: theme('colors.ink');
+  }
+
+  /* Foco accesible y discreto */
+  :focus-visible {
+    outline: 2px solid theme('colors.ink');
+    outline-offset: 2px;
+  }
+
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+
+  /* Compensa el header fijo al saltar a una sección con #ancla */
+  section[id],
+  footer[id] {
+    scroll-margin-top: 84px;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-feature-settings: 'liga' 1, 'kern' 1;
+  }
+
+  /* Línea fina decorativa */
+  .hairline {
+    @apply h-px w-full bg-ink/10;
+  }
+
+  /* Filtro de portfolio activo */
+  .filter-pill {
+    @apply relative text-[12px] uppercase tracking-wide2 text-stone transition-colors duration-300 hover:text-ink;
+  }
+  .filter-pill[data-active='true'] {
+    @apply text-ink;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Oculta scrollbar manteniendo el scroll (carruseles) */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Sutil grano editorial sobre fondos */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Scrollbar global discreto */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.canvas');
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.beige');
+  border-radius: 999px;
+  border: 3px solid theme('colors.canvas');
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.nude');
+}

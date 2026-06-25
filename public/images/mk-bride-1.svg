@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1180" viewBox="0 0 900 1180" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Novia">
+  <defs>
+    <linearGradient id="bgg13" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#f9f5f0"/><stop offset="0.55" stop-color="#efe6db"/><stop offset="1" stop-color="#e0d3c2"/>
+    </linearGradient>
+    <radialGradient id="lightg13" cx="0.32" cy="0.26" r="0.75">
+      <stop offset="0" stop-color="#fffaf3" stop-opacity="0.95"/><stop offset="0.45" stop-color="#fffaf3" stop-opacity="0.22"/><stop offset="1" stop-color="#fffaf3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shadowg13" cx="0.78" cy="0.84" r="0.7">
+      <stop offset="0" stop-color="#bdac96" stop-opacity="0.5"/><stop offset="1" stop-color="#bdac96" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vigg13" cx="0.5" cy="0.42" r="0.85">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.18"/>
+    </radialGradient>
+    <filter id="graing13"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" seed="13"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer></filter>
+    <filter id="softg13" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="45"/></filter>
+  </defs>
+  <rect width="900" height="1180" fill="url(#bgg13)"/>
+  <ellipse cx="270" cy="283.2" rx="360" ry="377.6" fill="#fffaf3" opacity="0.5" filter="url(#softg13)"/>
+  <ellipse cx="738" cy="1014.8" rx="360" ry="354" fill="#bdac96" opacity="0.38" filter="url(#softg13)"/>
+  <rect width="900" height="1180" fill="url(#lightg13)"/>
+  <rect width="900" height="1180" fill="url(#shadowg13)"/>
+  <g transform="translate(0 50) scale(1 1)">
+    <g stroke="#8d7a62" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"  opacity="0.32">
+      <ellipse cx="450" cy="500" rx="118" ry="150"/>
+      <path d="M340 420 Q450 300 560 420"/>
+      <path d="M338 430 C 250 560, 280 760, 360 860"/>
+      <path d="M562 430 C 650 560, 620 760, 540 860"/>
+      <g transform="translate(450 360)"><circle r="14" fill="#8d7a62" fill-opacity="0.25"/><circle cx="26" cy="0" r="13" fill="#8d7a62" fill-opacity="0.2" stroke="none"/><circle cx="8" cy="25" r="13" fill="#8d7a62" fill-opacity="0.2" stroke="none"/><circle cx="-21" cy="15" r="13" fill="#8d7a62" fill-opacity="0.2" stroke="none"/><circle cx="-21" cy="-15" r="13" fill="#8d7a62" fill-opacity="0.2" stroke="none"/><circle cx="8" cy="-25" r="13" fill="#8d7a62" fill-opacity="0.2" stroke="none"/></g>
+    </g></g>
+  <rect width="900" height="1180" fill="url(#vigg13)"/>
+  <rect width="900" height="1180" filter="url(#graing13)" opacity="0.5"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle"><text x="450" y="1097.4" font-size="28" letter-spacing="5" fill="#8d7a62" opacity="0.7">NOVIA</text></g>
+  
+</svg>

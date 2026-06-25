@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Maquillaje profesional">
+  <defs>
+    <linearGradient id="bgg37" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#f3e8db"/><stop offset="0.55" stop-color="#e7cdb8"/><stop offset="1" stop-color="#d6b39a"/>
+    </linearGradient>
+    <radialGradient id="lightg37" cx="0.32" cy="0.26" r="0.75">
+      <stop offset="0" stop-color="#fcf4ea" stop-opacity="0.95"/><stop offset="0.45" stop-color="#fcf4ea" stop-opacity="0.22"/><stop offset="1" stop-color="#fcf4ea" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shadowg37" cx="0.78" cy="0.84" r="0.7">
+      <stop offset="0" stop-color="#b9967c" stop-opacity="0.5"/><stop offset="1" stop-color="#b9967c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vigg37" cx="0.5" cy="0.42" r="0.85">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.18"/>
+    </radialGradient>
+    <filter id="graing37"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" seed="37"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer></filter>
+    <filter id="softg37" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="80"/></filter>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bgg37)"/>
+  <ellipse cx="480" cy="264" rx="640" ry="352" fill="#fcf4ea" opacity="0.5" filter="url(#softg37)"/>
+  <ellipse cx="1312" cy="946" rx="640" ry="330" fill="#b9967c" opacity="0.38" filter="url(#softg37)"/>
+  <rect width="1600" height="1100" fill="url(#lightg37)"/>
+  <rect width="1600" height="1100" fill="url(#shadowg37)"/>
+  <g transform="translate(0 46.610169491525426) scale(1.7777777777777777 0.9322033898305084)">
+    <g stroke="#a47c63" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"  opacity="0.34">
+      <path d="M640 330 C 560 470, 560 610, 640 760"/>
+      <g transform="rotate(34 360 560)">
+        <line x1="250" y1="560" x2="520" y2="560"/>
+        <path d="M520 534 q120 26 0 52 q-40 -26 0 -52" fill="#a47c63" fill-opacity="0.12"/>
+      </g>
+    </g></g>
+  <rect width="1600" height="1100" fill="url(#vigg37)"/>
+  <rect width="1600" height="1100" filter="url(#graing37)" opacity="0.5"/>
+  
+  
+</svg>
